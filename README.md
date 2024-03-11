@@ -1,1 +1,1 @@
-This repo contains the solutions to the LeetCode questions that I've solved until now. This repo updates only after I solved a question successfully and the solution is readable and optinal comments  
+This repo contains the solutions to the LeetCode questions that I've solved until now. This repo updates only after I solved a question successfully and the solution is readable (with optional comments).
