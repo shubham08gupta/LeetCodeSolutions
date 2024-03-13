@@ -1,5 +1,7 @@
 package com.example.myapplication.leetcode.twoPointers
 
+// https://leetcode.com/problems/valid-palindrome/description/
+
 fun isPalindrome(str: String): Boolean {
     val s = str.toLowerCase()
     var l = 0
