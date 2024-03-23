@@ -2,7 +2,7 @@ package com.example.myapplication.leetcode.array
 
 // https://leetcode.com/problems/spiral-matrix/description/
 
-// T.C. O(m * n) m = #rows and n = #columns
+// T.C. O(m * n) where m = #rows and n = #columns
 private fun spiralOrder(matrix: Array<IntArray>): List<Int> {
     val ans = mutableListOf<Int>()
 
@@ -24,41 +24,41 @@ private fun spiralOrder(matrix: Array<IntArray>): List<Int> {
     while (a <= b && c <= d) {
         if (row) {
             // print row
-            rowReverse = if (rowReverse) {
+            if (rowReverse) {
                 // print(d -> c)
                 for (i in d downTo c) {
                     ans.add(matrix[b][i])
                 }
                 b--
-                false
             } else {
                 // print(c -> d)
                 for (i in c..d) {
                     ans.add(matrix[a][i])
                 }
                 a++
-                true
             }
-            row = false
+            // print in reverse order next time
+            rowReverse = !rowReverse
         } else {
             // print column
-            colReverse = if (colReverse) {
+            if (colReverse) {
                 // print(b -> a)
                 for (i in b downTo a) {
                     ans.add(matrix[i][c])
                 }
                 c++
-                false
             } else {
                 // print(a -> b)
                 for (i in a..b) {
                     ans.add(matrix[i][d])
                 }
                 d--
-                true
             }
-            row = true
+            // print in reverse order next time
+            colReverse = !colReverse
         }
+        // print column if row printed and vice-versa
+        row = !row
     }
     return ans
 }
