@@ -4,7 +4,7 @@ import kotlin.math.abs
 
 // https://leetcode.com/problems/n-queens/description/
 
-fun solveNQueens(n: Int): List<List<String>> {
+private fun solveNQueens(n: Int): List<List<String>> {
     val result = mutableListOf<List<String>>()
 
     val positions = mutableListOf<Pair<Int, Int>>()
